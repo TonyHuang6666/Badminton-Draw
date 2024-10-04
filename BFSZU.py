@@ -1,7 +1,7 @@
 import sys
 import random
-from PyQt5.QtWidgets import (QApplication, QWidget, QLabel, QLineEdit, QPushButton, QTextEdit, QVBoxLayout, QHBoxLayout, QMessageBox)
-
+import pandas as pd
+from PyQt5.QtWidgets import (QApplication, QWidget, QLabel, QLineEdit, QPushButton, QTextEdit, QVBoxLayout, QHBoxLayout, QMessageBox, QFileDialog)
 
 class Draw:
     def __init__(self):
@@ -149,6 +149,12 @@ class DrawApp(QWidget):
         self.generate_button = QPushButton('生成结果', self)
         self.generate_button.clicked.connect(self.generate_result)
 
+        self.load_excel_button = QPushButton('从Excel读取名单', self)
+        self.load_excel_button.clicked.connect(self.load_from_excel)
+
+        self.load_txt_button = QPushButton('从TXT读取名单', self)
+        self.load_txt_button.clicked.connect(self.load_from_txt)
+
         # 显示结果
         self.result_display = QTextEdit(self)
         self.result_display.setReadOnly(True)
@@ -165,12 +171,50 @@ class DrawApp(QWidget):
         layout.addWidget(self.name_input)
         layout.addWidget(self.seeded_name_label)
         layout.addWidget(self.seeded_name_input)
+
+        # 文件读取按钮
+        file_layout = QHBoxLayout()
+        file_layout.addWidget(self.load_excel_button)
+        file_layout.addWidget(self.load_txt_button)
+
+        layout.addLayout(file_layout)
         layout.addWidget(self.generate_button)
         layout.addWidget(self.result_display)
 
         self.setLayout(layout)
         self.setWindowTitle('抽签程序')
         self.show()
+
+    def load_from_excel(self):
+        # 打开文件对话框，选择Excel文件
+        file_name, _ = QFileDialog.getOpenFileName(self, "打开Excel文件", "", "Excel Files (*.xlsx *.xls)")
+        if file_name:
+            try:
+                # 读取Excel文件
+                df = pd.read_excel(file_name)
+                if 'name' in df.columns:
+                    self.draw.name = df['name'].tolist()
+                    self.name_input.setText(','.join(self.draw.name))
+                if 'seeded' in df.columns:
+                    self.draw.seededName = df['seeded'].tolist()
+                    self.seeded_name_input.setText(','.join(self.draw.seededName))
+                self.number_input.setText(str(len(self.draw.name)))
+            except Exception as e:
+                QMessageBox.warning(self, "读取错误", f"读取Excel文件失败: {str(e)}")
+
+    def load_from_txt(self):
+        # 打开文件对话框，选择TXT文件
+        file_name, _ = QFileDialog.getOpenFileName(self, "打开TXT文件", "", "Text Files (*.txt)")
+        if file_name:
+            try:
+                # 读取TXT文件
+                with open(file_name, 'r', encoding='utf-8') as file:
+                    lines = file.readlines()
+                    self.draw.name = [line.strip() for line in lines if line.strip()]
+                    self.name_input.setText(','.join(self.draw.name))
+                    self.number_input.setText(str(len(self.draw.name)))
+            except Exception as e:
+                QMessageBox.warning(self, "读取错误", f"读取TXT文件失败: {str(e)}")
 
     def generate_result(self):
         try:
