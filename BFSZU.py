@@ -1,6 +1,7 @@
-import time
+import sys
 import random
-from datetime import datetime
+from PyQt5.QtWidgets import (QApplication, QWidget, QLabel, QLineEdit, QPushButton, QTextEdit, QVBoxLayout, QHBoxLayout, QMessageBox)
+
 
 class Draw:
     def __init__(self):
@@ -18,7 +19,6 @@ class Draw:
         self.roundOneArray = []  # 第一轮人员名单
 
     def random_num_generator(self, arr, num):
-        # 生成不重复的随机数
         n, m = 0, num - 1
         if arr == self.seededArray:
             n = self.number
@@ -32,7 +32,6 @@ class Draw:
                 arr.append(random_num)
 
     def divide_array(self, nums, m):
-        # 将数组划分为m个子数组
         res = [[] for _ in range(m)]
         n = len(nums)
         for j in range(m):
@@ -41,13 +40,12 @@ class Draw:
         return res
 
     def print_list(self, note, arr):
-        # 打印抽签结果
-        print(f"{note}:")
+        result = f"{note}:\n"
         for i, group in enumerate(arr, 1):
-            print(f"第 {i} 组({len(group)}): {', '.join([self.name[idx] for idx in group])}")
+            result += f"第 {i} 组({len(group)}): {', '.join([self.name[idx] for idx in group])}\n"
+        return result
 
     def distribute_elements(self, seeded_array, temp_name_array):
-        # 随机且均匀地将种子选手插入各组
         random.shuffle(seeded_array)
         for i, seeded in enumerate(seeded_array):
             temp_name_array[i % len(temp_name_array)].append(seeded)
@@ -56,14 +54,12 @@ class Draw:
             random.shuffle(group)
 
     def delete_same_elements(self, temp, bye_round_array):
-        # 从temp数组中删除bye_round_array中的元素
         result = []
         for i, group in enumerate(temp):
             result.append([x for x in group if x not in bye_round_array[i]])
         return result
 
     def select(self, temp_name_array, bye_round_number):
-        # 从各组中均匀抽取bye_round_number个选手
         res = [[] for _ in temp_name_array]
         remainder = bye_round_number % len(temp_name_array)
         for i in range(len(temp_name_array)):
@@ -85,10 +81,11 @@ class Draw:
         temp_name_array.sort(key=len)
         self.distribute_elements(self.seededArray, temp_name_array)
 
-        if option in [2, 4]:  # 循环赛模式
-            self.print_list("\n总分组结果如下", temp_name_array)
+        result = ""
+        if option == 2:  # 循环赛模式
+            result += self.print_list("\n总分组结果如下", temp_name_array)
 
-        if option in [1, 3]:  # 淘汰赛模式
+        if option == 1:  # 淘汰赛模式
             odd_group, even_group = 0, 0
             odd_group_num, even_group_num = 0, 0
 
@@ -119,40 +116,88 @@ class Draw:
             for i in range(min(len(self.groupArray), len(self.byeRoundArray))):
                 self.groupArray[i].extend(self.byeRoundArray[i])
 
-            self.print_list("\n第一轮轮空名单如下", self.byeRoundArray)
-            self.print_list("\n第一轮对阵名单如下", self.roundOneArray)
-            self.print_list("\n总分组结果如下", self.groupArray)
+            result += self.print_list("\n第一轮轮空名单如下", self.byeRoundArray)
+            result += self.print_list("\n第一轮对阵名单如下", self.roundOneArray)
+            result += self.print_list("\n总分组结果如下", self.groupArray)
+        
+        return result
 
-def get_input_from_user():
-    # 获取用户输入的参数
-    draw = Draw()
 
-    # 获取参赛人数
-    draw.number = int(input("请输入参赛人数: "))
+class DrawApp(QWidget):
+    def __init__(self):
+        super().__init__()
 
-    # 获取分组数
-    draw.groupNumber = int(input("请输入分组数: "))
+        self.draw = Draw()
+        self.init_ui()
 
-    # 获取种子选手数
-    draw.seededNumber = int(input("请输入种子选手数: "))
+    def init_ui(self):
+        # 输入标签
+        self.number_label = QLabel('参赛人数:')
+        self.group_label = QLabel('分组数:')
+        self.seeded_label = QLabel('种子数:')
+        self.name_label = QLabel('选手姓名(逗号分隔):')
+        self.seeded_name_label = QLabel('种子选手姓名(逗号分隔):')
 
-    # 输入参赛者姓名
-    print("请输入参赛者姓名，每行输入一个：")
-    for i in range(draw.number):
-        draw.name.append(input(f"输入选手{i+1}的名字: "))
+        # 输入框
+        self.number_input = QLineEdit(self)
+        self.group_input = QLineEdit(self)
+        self.seeded_input = QLineEdit(self)
+        self.name_input = QLineEdit(self)
+        self.seeded_name_input = QLineEdit(self)
 
-    # 输入种子选手姓名
-    if draw.seededNumber > 0:
-        print("请输入种子选手姓名，每行输入一个：")
-        for i in range(draw.seededNumber):
-            draw.seededName.append(input(f"输入种子选手{i+1}的名字: "))
+        # 按钮
+        self.generate_button = QPushButton('生成结果', self)
+        self.generate_button.clicked.connect(self.generate_result)
 
-    # 选择抽签模式
-    print("请选择抽签模式：1. 淘汰赛 2. 循环赛")
-    option = int(input("输入模式编号: "))
+        # 显示结果
+        self.result_display = QTextEdit(self)
+        self.result_display.setReadOnly(True)
 
-    # 生成抽签结果
-    draw.generation(option)
+        # 布局
+        layout = QVBoxLayout()
+        layout.addWidget(self.number_label)
+        layout.addWidget(self.number_input)
+        layout.addWidget(self.group_label)
+        layout.addWidget(self.group_input)
+        layout.addWidget(self.seeded_label)
+        layout.addWidget(self.seeded_input)
+        layout.addWidget(self.name_label)
+        layout.addWidget(self.name_input)
+        layout.addWidget(self.seeded_name_label)
+        layout.addWidget(self.seeded_name_input)
+        layout.addWidget(self.generate_button)
+        layout.addWidget(self.result_display)
 
-if __name__ == "__main__":
-    get_input_from_user()
+        self.setLayout(layout)
+        self.setWindowTitle('抽签程序')
+        self.show()
+
+    def generate_result(self):
+        try:
+            # 获取输入
+            self.draw.number = int(self.number_input.text())
+            self.draw.groupNumber = int(self.group_input.text())
+            self.draw.seededNumber = int(self.seeded_input.text())
+
+            # 处理姓名输入
+            self.draw.name = self.name_input.text().split(',')
+            self.draw.seededName = self.seeded_name_input.text().split(',')
+
+            # 检查输入的正确性
+            if len(self.draw.name) != self.draw.number:
+                raise ValueError("选手姓名数量与参赛人数不一致！")
+            if len(self.draw.seededName) != self.draw.seededNumber:
+                raise ValueError("种子选手姓名数量与种子数不一致！")
+
+            # 显示结果（淘汰赛模式）
+            result = self.draw.generation(option=1)
+            self.result_display.setText(result)
+
+        except ValueError as e:
+            QMessageBox.warning(self, "输入错误", str(e))
+
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    ex = DrawApp()
+    sys.exit(app.exec_())
