@@ -1,9 +1,4 @@
-# Create a Python version of the provided C++ program and save it for download.
-from datetime import datetime
-import random
-from typing import List
-
-py_code = r'''# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """
 由 22 届深大羽协会长 Tony Huang 编写的通用快速抽签分组程序（Python 版）。
 本文件是从原单文件 C++ 版本等价转换而来，尽量保持交互与输出一致：
@@ -336,11 +331,3 @@ if __name__ == "__main__":
     except Exception:
         pass
     main()
-'''
-
-# Write the Python file
-output_path = "/mnt/data/draw_lottery.py"
-with open(output_path, "w", encoding="utf-8") as f:
-    f.write(py_code)
-
-output_path

@@ -1,11 +1,11 @@
-/*    ç”±22å±Šæ·±å¤§ç¾½åä¼šé•¿Tony Huang(éè®¡ç®—æœºä¸“ä¸š)ç¼–å†™çš„é€šç”¨å¿«é€ŸæŠ½ç­¾åˆ†ç»„ç¨‹åºï¼Œå¯åº”ç”¨äºæ—¥å¸¸å•é¡¹èµ›æˆ–å›¢ä½“èµ›çš„æŠ½ç­¾åˆ†ç»„ã€‚
-   ä¸ºäº†æ–¹ä¾¿å…¶ä»–éITç›¸å…³ä¸“ä¸šçš„å¹²äº‹ä½¿ç”¨IDEè¿è¡Œï¼Œæ•…ä»…ä½¿ç”¨å•æ–‡ä»¶çš„æ–¹å¼ç»„ç»‡ã€‚ç”±äº2022å¹´æ ¡é•¿æ¯æ—¶é—´è¾ƒä¸º
-   ç´§è¿«ï¼Œæ•…ä¹Ÿæœªåº”ç”¨MFCç¼–ç¨‹ç›¸å…³çŸ¥è¯†åšæˆwindowsåº”ç”¨ï¼Œè®¾è®¡æ—¶ä¹Ÿä¸è€ƒè™‘é”™è¯¯è¾“å…¥çš„æƒ…å†µã€‚æœ¬ç¨‹åºä»æœ‰å¯ä»¥æ”¹
-   è¿›çš„åœ°æ–¹ï¼Œä¾‹å¦‚åœ¨æœ¬ç¨‹åºä¸­å•é¡¹èµ›ç§å­é€‰æ‰‹å’Œè½®ç©ºé€‰æ‰‹çš„åˆ†å¸ƒè™½ç„¶å‡åŒ€ä¸”éšæœºï¼Œæ˜¯å…¬å¹³çš„ï¼Œä½†æœªå®Œå…¨æŒ‰ç…§
-   ã€Šç¾½æ¯›çƒç«èµ›è§„åˆ™ã€‹(2021)ä¸­â€œä¸Šã€ä¸‹åŠåŒºâ€çš„ç›¸å…³è§„å®šè¿›è¡Œæ’å¸ƒã€‚
-      æ„Ÿè°¢ChatGPT 3.5ä¸ºä»£ç åŠ ä¸Šçš„æ³¨é‡Šã€‚å¦‚éœ€ä½¿ç”¨æˆ–è½¬å‘è¯·æ³¨æ˜æ¥æºäºæ·±å¤§ç¾½å
+/*    ÓÉ22½ìÉî´óÓğĞ­»á³¤Tony Huang(·Ç¼ÆËã»ú×¨Òµ)±àĞ´µÄÍ¨ÓÃ¿ìËÙ³éÇ©·Ö×é³ÌĞò£¬¿ÉÓ¦ÓÃÓÚÈÕ³£µ¥ÏîÈü»òÍÅÌåÈüµÄ³éÇ©·Ö×é¡£
+   ÎªÁË·½±ãÆäËû·ÇITÏà¹Ø×¨ÒµµÄ¸ÉÊÂÊ¹ÓÃIDEÔËĞĞ£¬¹Ê½öÊ¹ÓÃµ¥ÎÄ¼şµÄ·½Ê½×éÖ¯¡£ÓÉÓÚ2022ÄêĞ£³¤±­Ê±¼ä½ÏÎª
+   ½ôÆÈ£¬¹ÊÒ²Î´Ó¦ÓÃMFC±à³ÌÏà¹ØÖªÊ¶×ö³ÉwindowsÓ¦ÓÃ£¬Éè¼ÆÊ±Ò²²»¿¼ÂÇ´íÎóÊäÈëµÄÇé¿ö¡£±¾³ÌĞòÈÔÓĞ¿ÉÒÔ¸Ä
+   ½øµÄµØ·½£¬ÀıÈçÔÚ±¾³ÌĞòÖĞµ¥ÏîÈüÖÖ×ÓÑ¡ÊÖºÍÂÖ¿ÕÑ¡ÊÖµÄ·Ö²¼ËäÈ»¾ùÔÈÇÒËæ»ú£¬ÊÇ¹«Æ½µÄ£¬µ«Î´ÍêÈ«°´ÕÕ
+   ¡¶ÓğÃ«Çò¾ºÈü¹æÔò¡·(2021)ÖĞ¡°ÉÏ¡¢ÏÂ°ëÇø¡±µÄÏà¹Ø¹æ¶¨½øĞĞÅÅ²¼¡£
+      ¸ĞĞ»ChatGPT 3.5Îª´úÂë¼ÓÉÏµÄ×¢ÊÍ¡£ÈçĞèÊ¹ÓÃ»ò×ª·¢Çë×¢Ã÷À´Ô´ÓÚÉî´óÓğĞ­
 */
-// å¼•å…¥æ ‡å‡†è¾“å…¥è¾“å‡ºã€æ—¶é—´åº“ã€éšæœºæ•°ç”Ÿæˆã€æ–‡ä»¶æµã€æ—¶é—´è®¡æ—¶å™¨ã€åŠ¨æ€æ•°ç»„ã€å­—ç¬¦ä¸²ã€ç®—æ³•ã€æ— åºé›†åˆåº“
+// ÒıÈë±ê×¼ÊäÈëÊä³ö¡¢Ê±¼ä¿â¡¢Ëæ»úÊıÉú³É¡¢ÎÄ¼şÁ÷¡¢Ê±¼ä¼ÆÊ±Æ÷¡¢¶¯Ì¬Êı×é¡¢×Ö·û´®¡¢Ëã·¨¡¢ÎŞĞò¼¯ºÏ¿â
 #include <iostream>
 #include <ctime>
 #include <random>
@@ -17,340 +17,349 @@
 #include <algorithm>
 #include <unordered_set>
 using namespace std;
-#pragma warning(disable : 4996) // ç¦ç”¨æŸä¸ªç¼–è¯‘è­¦å‘Š
-#define _CRT_SECURE_NO_WARNINGS // å®šä¹‰å®ï¼Œè¡¨ç¤ºå¿½ç•¥ä¸€äº›ç‰¹å®šçš„ç¼–è¯‘å™¨è­¦å‘Š
-// å®šä¹‰å››ä¸ªå®ï¼Œåˆ†åˆ«è¡¨ç¤ºå››ä¸ªæ¯”èµ›é¡¹ç›®ï¼šå•é¡¹èµ›æ·˜æ±°èµ›ã€å•é¡¹èµ›å¾ªç¯èµ›ã€å›¢ä½“èµ›æ·˜æ±°èµ›ã€å›¢ä½“èµ›å¾ªç¯èµ›
+#pragma warning(disable : 4996) // ½ûÓÃÄ³¸ö±àÒë¾¯¸æ
+#define _CRT_SECURE_NO_WARNINGS // ¶¨Òåºê£¬±íÊ¾ºöÂÔÒ»Ğ©ÌØ¶¨µÄ±àÒëÆ÷¾¯¸æ
+// ¶¨ÒåËÄ¸öºê£¬·Ö±ğ±íÊ¾ËÄ¸ö±ÈÈüÏîÄ¿£ºµ¥ÏîÈüÌÔÌ­Èü¡¢µ¥ÏîÈüÑ­»·Èü¡¢ÍÅÌåÈüÌÔÌ­Èü¡¢ÍÅÌåÈüÑ­»·Èü
 #define singleGame 1
 #define singleGameLoop 2
 #define teamGame 3
 #define teamGameLoop 4
+
+//¶¨ÒåDrawÀà
 class Draw
 {
 public:
     char t[32];
-    int number = 0;                                                                                       // å•é¡¹ç›®å‚èµ›äººæ•°æˆ–é˜Ÿä¼æ€»æ•°
-    int groupNumber = 0;                                                                                  // åˆ†ç»„æ•°
-    int seededNumber = 0;                                                                                 // ç§å­æ•°
-    int roundOneNumber = 0;                                                                               // ç¬¬ä¸€è½®äººå‘˜æ€»æ•°
-    int byeRoundNumber = 0;                                                                               // ç¬¬ä¸€è½®è½®ç©ºäººå‘˜æ€»æ•°
-    vector<string> name;                                                                                  // è¾“å…¥çš„äººå‘˜åå•çš„ä¸€ç»´å‘é‡
-    vector<int> seededArray;                                                                              // é«˜æ°´å¹³é€‰æ‰‹/ç§å­é€‰æ‰‹ä¸€ç»´å‘é‡
-    vector<int> randomArray;                                                                              // å‚¨å­˜ä¸é‡å¤éšæœºæ•°çš„ä¸€ç»´å‘é‡
-    vector<string> seededName;                                                                            // é«˜æ°´å¹³é€‰æ‰‹/ç§å­é€‰æ‰‹åå•ä¸€ç»´å‘é‡
-    vector<vector<int>> groupArray;                                                                       // æ€»æŠ½ç­¾ç»“æœäºŒç»´å‘é‡
-    vector<vector<int>> byeRoundArray;                                                                    // ç¬¬ä¸€è½®è½®ç©ºé€‰æ‰‹åå•äºŒç»´å‘é‡
-    vector<vector<int>> roundOneArray;                                                                    // ç¬¬ä¸€è½®äººå‘˜åå•äºŒç»´å‘é‡
-    void generation(int option);                                                                          // æŠ½ç­¾åˆ†ç»„ç”Ÿæˆå‡½æ•°
-    void randomNumGenerator(vector<int> &Array, int num);                                                 // ç”Ÿæˆéšæœºæ•°å¹¶å­˜å…¥å‘é‡çš„å‡½æ•°
-    vector<vector<int>> divideArray(vector<int> &nums, int m);                                            // å°†å‘é‡ä¸­çš„å…ƒç´ åˆ†æˆmä»½ï¼Œä»»æ„ç›¸é‚»ä¸¤ä»½ä¹‹é—´å…ƒç´ ä¸ªæ•°ç›¸å·®ä¸è¶…è¿‡1
-    void printList(ofstream &out_file, string note, vector<vector<int>> &Array);                          // æ‰“å°åå•å¹¶è¾“å‡ºåˆ°æ–‡ä»¶
-    vector<vector<int>> Select(const vector<vector<int>> &tempNameArray, int byeRoundNumber);             // ä»ä¸€ä¸ªäºŒç»´å‘é‡çš„æ¯ä¸€è¡Œå‡åŒ€æŠ½å–ç‰¹å®šä¸ªå…ƒç´ ç»„æˆäºŒç»´å‘é‡
-    void distributeElements(const vector<int> &seededArray, vector<vector<int>> &tempNameArray);          // éšæœºä¸”å‡åŒ€åœ°å°†å‰è€…å‘é‡ä¸­çš„å…ƒç´ åˆ†é…åœ¨åè€…æ¯ä¸€è¡Œå‘é‡ä¸­
-    vector<vector<int>> deleteSameElements(vector<vector<int>> temp, vector<vector<int>> byeRoundNumber); // å°†ä¸¤ä¸ªäºŒç»´å‘é‡ä¸­çš„ä¸åŒå…ƒç´ ç›¸å‡çš„å‡½æ•°
-    char *getTime()                                                                                       // å®šä¹‰åä¸º getTime çš„å­—ç¬¦æŒ‡é’ˆå‡½æ•°ï¼Œç”¨äºè·å–ç³»ç»Ÿå½“å‰æ—¶é—´
+    int number = 0;                                                                                       // µ¥ÏîÄ¿²ÎÈüÈËÊı»ò¶ÓÎé×ÜÊı
+    int groupNumber = 0;                                                                                  // ·Ö×éÊı
+    int seededNumber = 0;                                                                                 // ÖÖ×ÓÊı
+    int roundOneNumber = 0;                                                                               // µÚÒ»ÂÖÈËÔ±×ÜÊı
+    int byeRoundNumber = 0;                                                                               // µÚÒ»ÂÖÂÖ¿ÕÈËÔ±×ÜÊı
+    vector<string> name;                                                                                  // ÊäÈëµÄÈËÔ±Ãûµ¥µÄÒ»Î¬ÏòÁ¿
+    vector<int> seededArray;                                                                              // ¸ßË®Æ½Ñ¡ÊÖ/ÖÖ×ÓÑ¡ÊÖÒ»Î¬ÏòÁ¿
+    vector<int> randomArray;                                                                              // ´¢´æ²»ÖØ¸´Ëæ»úÊıµÄÒ»Î¬ÏòÁ¿
+    vector<string> seededName;                                                                            // ¸ßË®Æ½Ñ¡ÊÖ/ÖÖ×ÓÑ¡ÊÖÃûµ¥Ò»Î¬ÏòÁ¿
+    vector<vector<int>> groupArray;                                                                       // ×Ü³éÇ©½á¹û¶şÎ¬ÏòÁ¿
+    vector<vector<int>> byeRoundArray;                                                                    // µÚÒ»ÂÖÂÖ¿ÕÑ¡ÊÖÃûµ¥¶şÎ¬ÏòÁ¿
+    vector<vector<int>> roundOneArray;                                                                    // µÚÒ»ÂÖÈËÔ±Ãûµ¥¶şÎ¬ÏòÁ¿
+    void generation(int option);                                                                          // ³éÇ©·Ö×éÉú³Éº¯Êı
+    void randomNumGenerator(vector<int> &Array, int num);                                                 // Éú³ÉËæ»úÊı²¢´æÈëÏòÁ¿µÄº¯Êı
+    vector<vector<int>> divideArray(vector<int> &nums, int m);                                            // ½«ÏòÁ¿ÖĞµÄÔªËØ·Ö³Ém·İ£¬ÈÎÒâÏàÁÚÁ½·İÖ®¼äÔªËØ¸öÊıÏà²î²»³¬¹ı1
+    void printList(ofstream &out_file, string note, vector<vector<int>> &Array);                          // ´òÓ¡Ãûµ¥²¢Êä³öµ½ÎÄ¼ş
+    vector<vector<int>> Select(const vector<vector<int>> &tempNameArray, int byeRoundNumber);             // ´ÓÒ»¸ö¶şÎ¬ÏòÁ¿µÄÃ¿Ò»ĞĞ¾ùÔÈ³éÈ¡ÌØ¶¨¸öÔªËØ×é³É¶şÎ¬ÏòÁ¿
+    void distributeElements(const vector<int> &seededArray, vector<vector<int>> &tempNameArray);          // Ëæ»úÇÒ¾ùÔÈµØ½«Ç°ÕßÏòÁ¿ÖĞµÄÔªËØ·ÖÅäÔÚºóÕßÃ¿Ò»ĞĞÏòÁ¿ÖĞ
+    vector<vector<int>> deleteSameElements(vector<vector<int>> temp, vector<vector<int>> byeRoundNumber); // ½«Á½¸ö¶şÎ¬ÏòÁ¿ÖĞµÄ²»Í¬ÔªËØÏà¼õµÄº¯Êı
+    char *getTime()                                                                                       // ¶¨ÒåÃûÎª getTime µÄ×Ö·ûÖ¸Õëº¯Êı£¬ÓÃÓÚ»ñÈ¡ÏµÍ³µ±Ç°Ê±¼ä
     {
-        time_t NowTime = time(0);                          // è·å–å½“å‰ç³»ç»Ÿæ—¶é—´ï¼Œå¹¶å°†æ—¶é—´èµ‹å€¼ç»™åä¸º NowTime çš„ time_t ç±»å‹å˜é‡
-        strftime(t, sizeof(t), "%c", localtime(&NowTime)); // ä½¿ç”¨ strftime å‡½æ•°å°†æ—¶é—´æ ¼å¼åŒ–ï¼Œå¹¶å°†ç»“æœå­˜å‚¨åˆ°åä¸º t çš„å­—ç¬¦æ•°ç»„ä¸­
-        return t;                                          // è¿”å›å­˜å‚¨æ—¶é—´çš„å­—ç¬¦æ•°ç»„æŒ‡é’ˆ
+        time_t NowTime = time(0);                          // »ñÈ¡µ±Ç°ÏµÍ³Ê±¼ä£¬²¢½«Ê±¼ä¸³Öµ¸øÃûÎª NowTime µÄ time_t ÀàĞÍ±äÁ¿
+        strftime(t, sizeof(t), "%c", localtime(&NowTime)); // Ê¹ÓÃ strftime º¯Êı½«Ê±¼ä¸ñÊ½»¯£¬²¢½«½á¹û´æ´¢µ½ÃûÎª t µÄ×Ö·ûÊı×éÖĞ
+        return t;                                          // ·µ»Ø´æ´¢Ê±¼äµÄ×Ö·ûÊı×éÖ¸Õë
     }
 };
-bool cmp(const vector<int> &a, const vector<int> &b) // å®šä¹‰åä¸º cmp çš„ bool ç±»å‹å‡½æ•°ï¼Œç”¨äºæ¯”è¾ƒä¸¤ä¸ª vector å®¹å™¨çš„å¤§å°
+
+// ¶¨ÒåÃûÎª cmp µÄ bool ÀàĞÍº¯Êı£¬ÓÃÓÚ±È½ÏÁ½¸ö vector ÈİÆ÷µÄ´óĞ¡
+bool cmp(const vector<int> &a, const vector<int> &b)
 {
-    return a.size() < b.size(); // è¿”å› a å®¹å™¨å¤§å°æ˜¯å¦å°äº b å®¹å™¨å¤§å°çš„å¸ƒå°”å€¼ï¼Œç”¨äºæ’åºç­‰æ“ä½œ
+    return a.size() < b.size(); // ·µ»Ø a ÈİÆ÷´óĞ¡ÊÇ·ñĞ¡ÓÚ b ÈİÆ÷´óĞ¡µÄ²¼¶ûÖµ£¬ÓÃÓÚÅÅĞòµÈ²Ù×÷
 }
 
-bool find(int num, vector<int> vec) // å®šä¹‰åä¸º find çš„ bool ç±»å‹å‡½æ•°ï¼Œç”¨äºåœ¨ vector å®¹å™¨ä¸­æŸ¥æ‰¾æŒ‡å®šçš„å…ƒç´ 
+// ¶¨ÒåÃûÎª find µÄ bool ÀàĞÍº¯Êı£¬ÓÃÓÚÔÚ vector ÈİÆ÷ÖĞ²éÕÒÖ¸¶¨µÄÔªËØ
+bool find(int num, vector<int> vec) 
 {
-    for (int i = 0; i < vec.size(); i++) // éå† vector å®¹å™¨ä¸­çš„æ‰€æœ‰å…ƒç´ 
-        if (vec[i] == num)               // åˆ¤æ–­å½“å‰å…ƒç´ æ˜¯å¦ç­‰äºæŒ‡å®šçš„å…ƒç´ 
-            return true;                 // è‹¥ç›¸ç­‰ï¼Œåˆ™è¿”å› true
-    return false;                        // è‹¥éå†å®Œæ•´ä¸ªå®¹å™¨ä»æœªæ‰¾åˆ°ï¼Œåˆ™è¿”å› false
+    for (int i = 0; i < vec.size(); i++) // ±éÀú vector ÈİÆ÷ÖĞµÄËùÓĞÔªËØ
+        if (vec[i] == num)               // ÅĞ¶Ïµ±Ç°ÔªËØÊÇ·ñµÈÓÚÖ¸¶¨µÄÔªËØ
+            return true;                 // ÈôÏàµÈ£¬Ôò·µ»Ø true
+    return false;                        // Èô±éÀúÍêÕû¸öÈİÆ÷ÈÔÎ´ÕÒµ½£¬Ôò·µ»Ø false
 }
 
-int countNonEmpty(const vector<string> &vec) // å®šä¹‰åä¸º countNonEmpty çš„æ•´å‹å‡½æ•°ï¼Œç”¨äºè®¡ç®— vector å®¹å™¨ä¸­éç©ºå­—ç¬¦ä¸²çš„ä¸ªæ•°
+// ¶¨ÒåÃûÎª countNonEmpty µÄÕûĞÍº¯Êı£¬ÓÃÓÚ¼ÆËã vector ÈİÆ÷ÖĞ·Ç¿Õ×Ö·û´®µÄ¸öÊı
+int countNonEmpty(const vector<string> &vec) 
 {
-    int count = 0;              // åˆå§‹åŒ–è®¡æ•°å™¨ä¸º 0
-    for (const auto &str : vec) // ä½¿ç”¨èŒƒå›´ for å¾ªç¯éå† vector å®¹å™¨ä¸­çš„æ‰€æœ‰å…ƒç´ 
-        if (!str.empty())       // åˆ¤æ–­å½“å‰å­—ç¬¦ä¸²æ˜¯å¦ä¸ºç©º
-            count++;            // è‹¥ä¸ä¸ºç©ºï¼Œåˆ™è®¡æ•°å™¨åŠ  1
-    return count;               // è¿”å›è®¡æ•°å™¨å€¼ï¼Œå³éç©ºå­—ç¬¦ä¸²çš„ä¸ªæ•°
+    int count = 0;              // ³õÊ¼»¯¼ÆÊıÆ÷Îª 0
+    for (const auto &str : vec) // Ê¹ÓÃ·¶Î§ for Ñ­»·±éÀú vector ÈİÆ÷ÖĞµÄËùÓĞÔªËØ
+        if (!str.empty())       // ÅĞ¶Ïµ±Ç°×Ö·û´®ÊÇ·ñÎª¿Õ
+            count++;            // Èô²»Îª¿Õ£¬Ôò¼ÆÊıÆ÷¼Ó 1
+    return count;               // ·µ»Ø¼ÆÊıÆ÷Öµ£¬¼´·Ç¿Õ×Ö·û´®µÄ¸öÊı
 }
 
-vector<vector<int>> Draw::divideArray(vector<int> &nums, int m) // å®šä¹‰åä¸º divideArray çš„å‡½æ•°ï¼Œè¿”å›å€¼ä¸ºä¸€ä¸ªäºŒç»´ vector å®¹å™¨ï¼Œç”¨äºå°†ä¸€ä¸ªä¸€ç»´ vector å®¹å™¨ nums åˆ’åˆ†ä¸º m ä¸ªå­æ•°ç»„
+// ¶¨ÒåÃûÎª divideArray µÄº¯Êı£¬·µ»ØÖµÎªÒ»¸ö¶şÎ¬ vector ÈİÆ÷£¬ÓÃÓÚ½«Ò»¸öÒ»Î¬ vector ÈİÆ÷ nums »®·ÖÎª m ¸ö×ÓÊı×é
+vector<vector<int>> Draw::divideArray(vector<int> &nums, int m) 
 {
-    int n = nums.size();                              // è·å– nums å®¹å™¨çš„å¤§å°
-    vector<vector<int>> res(m);                       // å®šä¹‰ä¸€ä¸ªäºŒç»´ vector å®¹å™¨ resï¼Œå®¹é‡ä¸º mï¼Œæ¯ä¸ªå­å®¹å™¨ä¹Ÿæ˜¯ä¸€ä¸ª vector<int> ç±»å‹ï¼Œç”¨äºå­˜å‚¨å­æ•°ç»„
-    int i = 0;                                        // åˆå§‹åŒ– i ä¸º 0
-    for (int j = 0; j < m; j++)                       // éå† 0 åˆ° m - 1 çš„æ¯ä¸€ä¸ªæ•´æ•° j
-        for (int k = 0; k < n / m + (j < n % m); k++) // éå† 0 åˆ° n / m + (j < n % m) - 1 çš„æ¯ä¸€ä¸ªæ•´æ•° kï¼Œå…¶ä¸­ j < n % m è¡¨ç¤ºå‰ n % m ä¸ªå­æ•°ç»„ä¸­çš„æ¯ä¸ªå­æ•°ç»„å¤šåŠ ä¸€ä¸ªå…ƒç´ 
-            res[j].push_back(nums[i++]);              // å°† nums ä¸­çš„å…ƒç´ æŒ‰ç…§é¡ºåºåˆ†é…ç»™å­æ•°ç»„ res[j]
-    return res;                                       // è¿”å›åˆ’åˆ†åçš„å­æ•°ç»„å®¹å™¨
+    int n = nums.size();                              // »ñÈ¡ nums ÈİÆ÷µÄ´óĞ¡
+    vector<vector<int>> res(m);                       // ¶¨ÒåÒ»¸ö¶şÎ¬ vector ÈİÆ÷ res£¬ÈİÁ¿Îª m£¬Ã¿¸ö×ÓÈİÆ÷Ò²ÊÇÒ»¸ö vector<int> ÀàĞÍ£¬ÓÃÓÚ´æ´¢×ÓÊı×é
+    int i = 0;                                        // ³õÊ¼»¯ i Îª 0
+    for (int j = 0; j < m; j++)                       // ±éÀú 0 µ½ m - 1 µÄÃ¿Ò»¸öÕûÊı j
+        for (int k = 0; k < n / m + (j < n % m); k++) // ±éÀú 0 µ½ n / m + (j < n % m) - 1 µÄÃ¿Ò»¸öÕûÊı k£¬ÆäÖĞ j < n % m ±íÊ¾Ç° n % m ¸ö×ÓÊı×éÖĞµÄÃ¿¸ö×ÓÊı×é¶à¼ÓÒ»¸öÔªËØ
+            res[j].push_back(nums[i++]);              // ½« nums ÖĞµÄÔªËØ°´ÕÕË³Ğò·ÖÅä¸ø×ÓÊı×é res[j]
+    return res;                                       // ·µ»Ø»®·ÖºóµÄ×ÓÊı×éÈİÆ÷
 }
 
-vector<vector<int>> Draw::deleteSameElements(vector<vector<int>> temp, vector<vector<int>> byeRoundNumber) // å®šä¹‰åä¸º deleteSameElements çš„å‡½æ•°ï¼Œè¿”å›å€¼ä¸ºä¸€ä¸ªäºŒç»´ vector å®¹å™¨ï¼Œç”¨äºåˆ é™¤ temp å’Œ byeRoundNumber ä¸­ç›¸åŒçš„å…ƒç´ 
+// ¶¨ÒåÃûÎª deleteSameElements µÄº¯Êı£¬·µ»ØÖµÎªÒ»¸ö¶şÎ¬ vector ÈİÆ÷£¬ÓÃÓÚÉ¾³ı temp ºÍ byeRoundNumber ÖĞÏàÍ¬µÄÔªËØ
+vector<vector<int>> Draw::deleteSameElements(vector<vector<int>> temp, vector<vector<int>> byeRoundNumber) 
 {
-    vector<vector<int>> result;                           // å®šä¹‰ä¸€ä¸ªäºŒç»´ vector å®¹å™¨ resultï¼Œç”¨äºå­˜å‚¨åˆ é™¤ç›¸åŒå…ƒç´ åçš„å­æ•°ç»„
-    result.resize(temp.size());                           // å°† result çš„å®¹é‡è°ƒæ•´ä¸º temp çš„å¤§å°
-    for (int i = 0; i < temp.size(); i++)                 // éå† temp çš„æ¯ä¸€ä¸ªå­æ•°ç»„
-        if (temp[i].size() != byeRoundNumber[i].size())   // åˆ¤æ–­ temp å’Œ byeRoundNumber ä¸­çš„å­æ•°ç»„é•¿åº¦æ˜¯å¦ç›¸åŒ
-            for (int j = 0; j < temp[i].size(); j++)      // éå† temp ä¸­å½“å‰å­æ•°ç»„çš„æ¯ä¸€ä¸ªå…ƒç´ 
-                if (!find(temp[i][j], byeRoundNumber[i])) // å¦‚æœå½“å‰å…ƒç´ ä¸åœ¨ byeRoundNumber çš„å½“å‰å­æ•°ç»„ä¸­
-                    result[i].push_back(temp[i][j]);      // å°†è¯¥å…ƒç´ æ·»åŠ åˆ° result ä¸­çš„å½“å‰å­æ•°ç»„ä¸­
-    return result;                                        // è¿”å›åˆ é™¤ç›¸åŒå…ƒç´ åçš„å­æ•°ç»„å®¹å™¨
+    vector<vector<int>> result;                           // ¶¨ÒåÒ»¸ö¶şÎ¬ vector ÈİÆ÷ result£¬ÓÃÓÚ´æ´¢É¾³ıÏàÍ¬ÔªËØºóµÄ×ÓÊı×é
+    result.resize(temp.size());                           // ½« result µÄÈİÁ¿µ÷ÕûÎª temp µÄ´óĞ¡
+    for (int i = 0; i < temp.size(); i++)                 // ±éÀú temp µÄÃ¿Ò»¸ö×ÓÊı×é
+        if (temp[i].size() != byeRoundNumber[i].size())   // ÅĞ¶Ï temp ºÍ byeRoundNumber ÖĞµÄ×ÓÊı×é³¤¶ÈÊÇ·ñÏàÍ¬
+            for (int j = 0; j < temp[i].size(); j++)      // ±éÀú temp ÖĞµ±Ç°×ÓÊı×éµÄÃ¿Ò»¸öÔªËØ
+                if (!find(temp[i][j], byeRoundNumber[i])) // Èç¹ûµ±Ç°ÔªËØ²»ÔÚ byeRoundNumber µÄµ±Ç°×ÓÊı×éÖĞ
+                    result[i].push_back(temp[i][j]);      // ½«¸ÃÔªËØÌí¼Óµ½ result ÖĞµÄµ±Ç°×ÓÊı×éÖĞ
+    return result;                                        // ·µ»ØÉ¾³ıÏàÍ¬ÔªËØºóµÄ×ÓÊı×éÈİÆ÷
 }
 
+// ¶¨ÒåÃûÎª Select µÄº¯Êı£¬·µ»ØÖµÎªÒ»¸ö¶şÎ¬ vector ÈİÆ÷£¬ÓÃÓÚ´Ó tempNameArray ÖĞ¾ùÔÈ³éÈ¡ byeRoundNumber ¸öÔªËØ
 vector<vector<int>> Draw::Select(const vector<vector<int>> &tempNameArray, int byeRoundNumber)
 {
-    // åˆ›å»ºä¸€ä¸ªäºŒç»´ vector resï¼Œå…¶è¡Œæ•°ç­‰äº tempNameArray çš„è¡Œæ•°ï¼Œåˆ—æ•°ç­‰äº byeRoundNumber / tempNameArray çš„è¡Œæ•°ã€‚
+    // ´´½¨Ò»¸ö¶şÎ¬ vector res£¬ÆäĞĞÊıµÈÓÚ tempNameArray µÄĞĞÊı£¬ÁĞÊıµÈÓÚ byeRoundNumber / tempNameArray µÄĞĞÊı¡£
     vector<vector<int>> res(tempNameArray.size(), vector<int>(byeRoundNumber / tempNameArray.size()));
 
-    // ç”¨å˜é‡ remainder è®°å½•é™¤æ³•çš„ä½™æ•°ã€‚
+    // ÓÃ±äÁ¿ remainder ¼ÇÂ¼³ı·¨µÄÓàÊı¡£
     int remainder = byeRoundNumber % tempNameArray.size();
 
-    // å¯¹æ¯ä¸€è¡Œè¿›è¡Œå¾ªç¯ã€‚
+    // ¶ÔÃ¿Ò»ĞĞ½øĞĞÑ­»·¡£
     for (int i = 0; i < tempNameArray.size(); ++i)
     {
-        // åˆ›å»ºä¸€ä¸ªä¸€ç»´ vectorï¼Œå…¶å…ƒç´ æ˜¯ tempNameArray[i] çš„ä¸‹æ ‡ã€‚
+        // ´´½¨Ò»¸öÒ»Î¬ vector£¬ÆäÔªËØÊÇ tempNameArray[i] µÄÏÂ±ê¡£
         vector<int> indices(tempNameArray[i].size());
         for (int j = 0; j < indices.size(); ++j)
             indices[j] = j;
 
-        // ä» tempNameArray[i] ä¸­é€‰æ‹© res[i] çš„å…ƒç´ ï¼Œå³å°† indices[j] å¯¹åº”çš„ tempNameArray[i][indices[j]] èµ‹å€¼ç»™ res[i][j]ã€‚
+        // ´Ó tempNameArray[i] ÖĞÑ¡Ôñ res[i] µÄÔªËØ£¬¼´½« indices[j] ¶ÔÓ¦µÄ tempNameArray[i][indices[j]] ¸³Öµ¸ø res[i][j]¡£
         for (int j = 0; j < res[i].size(); ++j)
             res[i][j] = tempNameArray[i][indices[j]];
 
-        // å¦‚æœ i å°äº remainderï¼Œåˆ™åœ¨ res[i] çš„æœ«å°¾æ·»åŠ  tempNameArray[i][indices[res[i].size()]]ã€‚
+        // Èç¹û i Ğ¡ÓÚ remainder£¬ÔòÔÚ res[i] µÄÄ©Î²Ìí¼Ó tempNameArray[i][indices[res[i].size()]]¡£
         if (i < remainder)
             res[i].push_back(tempNameArray[i][indices[res[i].size()]]);
     }
 
-    // è¿”å›ç»“æœäºŒç»´ vectorã€‚
+    // ·µ»Ø½á¹û¶şÎ¬ vector¡£
     return res;
 }
 
+// ¶¨ÒåÃûÎª existed µÄº¯Êı£¬·µ»ØÖµÎª bool ÀàĞÍ£¬ÓÃÓÚÅĞ¶Ï index ÊÇ·ñ´æÔÚÓÚ inputArray ÖĞ¡£
 bool existed(int index, vector<int> &inputArray, int num)
 {
-    // éå† inputArray æ•°ç»„ï¼ŒæŸ¥æ‰¾æ˜¯å¦å­˜åœ¨ index è¿™ä¸ªå…ƒç´ 
+    // ±éÀú inputArray Êı×é£¬²éÕÒÊÇ·ñ´æÔÚ index Õâ¸öÔªËØ
     for (int i = 0; i < num; i++)
         if (index == inputArray[i])
             return true;
-    // å¦‚æœä¸å­˜åœ¨ index è¿™ä¸ªå…ƒç´ ï¼Œè¿”å› false
+    // Èç¹û²»´æÔÚ index Õâ¸öÔªËØ£¬·µ»Ø false
     return false;
 }
 
+// ¶¨ÒåÃûÎª randomNumGenerator µÄº¯Êı£¬·µ»ØÖµÎª¿Õ£¬ÓÃÓÚÉú³ÉËæ»úÊı²¢´æÈë Array ÖĞ¡£
 void Draw::randomNumGenerator(vector<int> &Array, int num)
 {
     int n = 0, m = num - 1;
-    // å¦‚æœ Array æ•°ç»„ç­‰äº seededArray æ•°ç»„ï¼Œåˆ™ç”Ÿæˆ [number, number+seededNumber-1] èŒƒå›´å†…çš„éšæœºæ•°
+    // Èç¹û Array Êı×éµÈÓÚ seededArray Êı×é£¬ÔòÉú³É [number, number+seededNumber-1] ·¶Î§ÄÚµÄËæ»úÊı
     if (Array == seededArray)
     {
         n = number;
         m = number + seededNumber - 1;
     }
-    // ä½¿ç”¨å½“å‰æ—¶é—´ä½œä¸º mt19937 éšæœºæ•°ç”Ÿæˆå™¨çš„ç§å­
+    // Ê¹ÓÃµ±Ç°Ê±¼ä×÷Îª mt19937 Ëæ»úÊıÉú³ÉÆ÷µÄÖÖ×Ó
     mt19937 rng(std::chrono::system_clock::now().time_since_epoch().count());
     for (int i = 0; i < num; i++)
     {
-        // éšæœºç”Ÿæˆä½äº [n, m] èŒƒå›´å†…çš„æ•´æ•°
+        // Ëæ»úÉú³ÉÎ»ÓÚ [n, m] ·¶Î§ÄÚµÄÕûÊı
         uniform_int_distribution<> dis(n, m);
         int random_num = dis(rng);
-        // å¦‚æœç”Ÿæˆçš„éšæœºæ•°å·²ç»å­˜åœ¨äº Array æ•°ç»„ä¸­ï¼Œå°±ä¸€ç›´ç”Ÿæˆæ–°çš„éšæœºæ•°ï¼Œç›´åˆ°ç”Ÿæˆçš„éšæœºæ•°ä¸å†å­˜åœ¨äº Array æ•°ç»„ä¸­
+        // Èç¹ûÉú³ÉµÄËæ»úÊıÒÑ¾­´æÔÚÓÚ Array Êı×éÖĞ£¬¾ÍÒ»Ö±Éú³ÉĞÂµÄËæ»úÊı£¬Ö±µ½Éú³ÉµÄËæ»úÊı²»ÔÙ´æÔÚÓÚ Array Êı×éÖĞ
         while (existed(random_num, Array, i))
             random_num = dis(rng);
-        Array[i] = random_num; // å°†ç”Ÿæˆçš„éšæœºæ•°å­˜å‚¨åœ¨ Array æ•°ç»„ä¸­ï¼Œä½“ç°éšæœºæ€§&å…¬æ­£æ€§
+        Array[i] = random_num; // ½«Éú³ÉµÄËæ»úÊı´æ´¢ÔÚ Array Êı×éÖĞ£¬ÌåÏÖËæ»úĞÔ&¹«ÕıĞÔ
     }
 }
 
+// ¶¨ÒåÃûÎª distributeElements µÄº¯Êı£¬·µ»ØÖµÎª¿Õ£¬ÓÃÓÚ½« seededArray ÖĞµÄÔªËØ·ÖÅäµ½ tempNameArray ÖĞ¡£
 void Draw::distributeElements(const vector<int> &seededArray, vector<vector<int>> &tempNameArray)
 {
-    random_device rd;  // éšæœºè®¾å¤‡ï¼Œç”¨äºäº§ç”Ÿéšæœºç§å­
-    mt19937 gen(rd()); // ç”¨éšæœºè®¾å¤‡ç”Ÿæˆåˆå§‹ç§å­
+    random_device rd;  // Ëæ»úÉè±¸£¬ÓÃÓÚ²úÉúËæ»úÖÖ×Ó
+    mt19937 gen(rd()); // ÓÃËæ»úÉè±¸Éú³É³õÊ¼ÖÖ×Ó
     int numRows = tempNameArray.size();
-    for (int i = 0; i < seededArray.size(); i++) // å¾ªç¯éå†ç§å­æ•°ç»„ä¸­çš„å…ƒç´ 
+    for (int i = 0; i < seededArray.size(); i++) // Ñ­»·±éÀúÖÖ×ÓÊı×éÖĞµÄÔªËØ
     {
         int rowIndex = i % numRows;
-        tempNameArray[rowIndex].push_back(seededArray[i]); // å°†å½“å‰ç§å­å…ƒç´ æ·»åŠ åˆ° tempNameArray çš„ç¬¬ i % numRows è¡Œæœ«å°¾
+        tempNameArray[rowIndex].push_back(seededArray[i]); // ½«µ±Ç°ÖÖ×ÓÔªËØÌí¼Óµ½ tempNameArray µÄµÚ i % numRows ĞĞÄ©Î²
     }
-    // å¯¹æ¯ä¸€è¡Œçš„å…ƒç´ è¿›è¡Œéšæœºæ’åº
+    // ¶ÔÃ¿Ò»ĞĞµÄÔªËØ½øĞĞËæ»úÅÅĞò
     for (int i = 0; i < numRows; i++)
     {
         shuffle(tempNameArray[i].begin(), tempNameArray[i].end(), gen);
     }
 }
 
+// ¶¨ÒåÃûÎª Draw::generation µÄº¯Êı£¬·µ»ØÖµÎª¿Õ£¬ÓÃÓÚÉú³É³éÇ©½á¹û¡£
 void Draw::generation(int option)
 {
-    ofstream out_file("æŠ½ç­¾ç»“æœ.txt");       // æ‰“å¼€æ–‡ä»¶æµï¼Œå†™å…¥æ–‡ä»¶å
-    vector<int> randomArray(number);         // å®šä¹‰ä¸€ä¸ªé•¿åº¦ä¸ºnumberçš„intç±»å‹å‘é‡randomArray
-    randomNumGenerator(randomArray, number); // è°ƒç”¨randomNumGeneratorå‡½æ•°ç”Ÿæˆéšæœºæ•°å‘é‡
-    if (seededNumber != 0)                   // å¦‚æœè®¾å®šäº†ç§å­å·ç 
+    ofstream out_file("³éÇ©½á¹û.txt");       // ´ò¿ªÎÄ¼şÁ÷£¬Ğ´ÈëÎÄ¼şÃû
+    vector<int> randomArray(number);         // ¶¨ÒåÒ»¸ö³¤¶ÈÎªnumberµÄintÀàĞÍÏòÁ¿randomArray
+    randomNumGenerator(randomArray, number); // µ÷ÓÃrandomNumGeneratorº¯ÊıÉú³ÉËæ»úÊıÏòÁ¿
+    if (seededNumber != 0)                   // Èç¹ûÉè¶¨ÁËÖÖ×ÓºÅÂë
     {
-        seededArray.resize(seededNumber);              // æ”¹å˜ç§å­æ•°ç»„å¤§å°ä»¥é€‚åº”ç§å­æ•°é‡
-        randomNumGenerator(seededArray, seededNumber); // ç”Ÿæˆç§å­éšæœºæ•°
-        for (int i = 0; i < seededName.size(); i++)    // éå†ç§å­åå•
-            name.push_back(seededName[i]);             // å°†åå­—åŠ å…¥æ€»åå•
-        number = number + seededNumber;                // å¢åŠ æ€»äººæ•°
+        seededArray.resize(seededNumber);              // ¸Ä±äÖÖ×ÓÊı×é´óĞ¡ÒÔÊÊÓ¦ÖÖ×ÓÊıÁ¿
+        randomNumGenerator(seededArray, seededNumber); // Éú³ÉÖÖ×ÓËæ»úÊı
+        for (int i = 0; i < seededName.size(); i++)    // ±éÀúÖÖ×ÓÃûµ¥
+            name.push_back(seededName[i]);             // ½«Ãû×Ö¼ÓÈë×ÜÃûµ¥
+        number = number + seededNumber;                // Ôö¼Ó×ÜÈËÊı
     }
-    vector<vector<int>> tempNameArray;                     // å®šä¹‰ä¸€ä¸ªäºŒç»´å‘é‡tempNameArrayï¼Œç”¨äºå­˜å‚¨ç”±éšæœºæ•°ç”Ÿæˆçš„ä¸´æ—¶åˆ†ç»„åå•
-    tempNameArray = divideArray(randomArray, groupNumber); // è°ƒç”¨divideArrayå‡½æ•°ï¼Œå°†éšæœºæ•°åˆ†æˆgroupNumberä¸ªå°ç»„ï¼Œè¿”å›åˆ†ç»„ç»“æœ
-    sort(tempNameArray.begin(), tempNameArray.end(), cmp); // å°†åˆ†ç»„ç»“æœæŒ‰ç…§äººæ•°ä»å¤šåˆ°å°‘æ’åº
-    distributeElements(seededArray, tempNameArray);        // å°†ç§å­éšæœºæ•°æ’å…¥åˆ†ç»„ç»“æœä¸­
+    vector<vector<int>> tempNameArray;                     // ¶¨ÒåÒ»¸ö¶şÎ¬ÏòÁ¿tempNameArray£¬ÓÃÓÚ´æ´¢ÓÉËæ»úÊıÉú³ÉµÄÁÙÊ±·Ö×éÃûµ¥
+    tempNameArray = divideArray(randomArray, groupNumber); // µ÷ÓÃdivideArrayº¯Êı£¬½«Ëæ»úÊı·Ö³ÉgroupNumber¸öĞ¡×é£¬·µ»Ø·Ö×é½á¹û
+    sort(tempNameArray.begin(), tempNameArray.end(), cmp); // ½«·Ö×é½á¹û°´ÕÕÈËÊı´Ó¶àµ½ÉÙÅÅĞò
+    distributeElements(seededArray, tempNameArray);        // ½«ÖÖ×ÓËæ»ú²åÈë·Ö×é½á¹ûÖĞ
     sort(tempNameArray.begin(), tempNameArray.end(), cmp);
-    if (option == singleGameLoop || option == teamGameLoop)       // å¦‚æœæ˜¯å¾ªç¯èµ›æˆ–å›¢é˜Ÿèµ›
-        printList(out_file, "\næ€»åˆ†ç»„ç»“æœå¦‚ä¸‹ï¼š", tempNameArray); // è¾“å‡ºæ€»æŠ½ç­¾ç»“æœ
-    if (option == singleGame || option == teamGame)               // å¦‚æœæ˜¯æ™®é€šèµ›æˆ–å›¢é˜Ÿèµ›
+    if (option == singleGameLoop || option == teamGameLoop)       // Èç¹ûÊÇÑ­»·Èü»òÍÅ¶ÓÈü
+        printList(out_file, "\n×Ü·Ö×é½á¹ûÈçÏÂ£º", tempNameArray); // Êä³ö×Ü³éÇ©½á¹û
+    if (option == singleGame || option == teamGame)               // Èç¹ûÊÇÆÕÍ¨Èü»òÍÅ¶ÓÈü
     {
-        int i = 0, oddGroup = 0, oddGroupNum = 0, evenGroupNum = 0, evenGroup = 0; // åˆå§‹åŒ–è®¡æ•°å™¨
-        for (auto vec : tempNameArray)                                             // éå†åˆ†ç»„ç»“æœ
+        int i = 0, oddGroup = 0, oddGroupNum = 0, evenGroupNum = 0, evenGroup = 0; // ³õÊ¼»¯¼ÆÊıÆ÷
+        for (auto vec : tempNameArray)                                             // ±éÀú·Ö×é½á¹û
         {
-            if (tempNameArray[i].size() % 2 != 0) // å¦‚æœå°ç»„äººæ•°ä¸ºå¥‡æ•°
+            if (tempNameArray[i].size() % 2 != 0) // Èç¹ûĞ¡×éÈËÊıÎªÆæÊı
             {
-                oddGroup++;                            // è®¡ç®—å¥‡æ•°å°ç»„æ•°é‡
-                oddGroupNum = tempNameArray[i].size(); // è®°å½•å¥‡æ•°å°ç»„äººæ•°
+                oddGroup++;                            // ¼ÆËãÆæÊıĞ¡×éÊıÁ¿
+                oddGroupNum = tempNameArray[i].size(); // ¼ÇÂ¼ÆæÊıĞ¡×éÈËÊı
             }
-            if (tempNameArray[i].size() % 2 == 0) // å¦‚æœå°ç»„äººæ•°ä¸ºå¶æ•°
+            if (tempNameArray[i].size() % 2 == 0) // Èç¹ûĞ¡×éÈËÊıÎªÅ¼Êı
             {
-                evenGroup++;                            // è®¡ç®—å¶æ•°å°ç»„æ•°é‡
-                evenGroupNum = tempNameArray[i].size(); // è®°å½•å¶æ•°å°ç»„äººæ•°
+                evenGroup++;                            // ¼ÆËãÅ¼ÊıĞ¡×éÊıÁ¿
+                evenGroupNum = tempNameArray[i].size(); // ¼ÇÂ¼Å¼ÊıĞ¡×éÈËÊı
             }
-            i++; // è®¡æ•°å™¨è‡ªå¢
+            i++; // ¼ÆÊıÆ÷×ÔÔö
         }
-        /*æ ¸å¿ƒæ€æƒ³*/
+        /*ºËĞÄË¼Ïë*/
         i=0;
         for (; pow(2, i) < evenGroupNum || pow(2, i) == evenGroupNum; i++)
         {
             if (pow(2, i) > evenGroupNum)
                 break;
         }
-        int gap=evenGroupNum-pow(2,i-1);//ç®—å‡ºäººæ•°ä¸ºå¶æ•°çš„å°ç»„çš„äººæ•°è·ç¦»æ¯”å…¶å°ä½†åˆæœ€æ¥è¿‘çš„2çš„næ¬¡å¹‚çš„å·®å€¼
-        if(gap!=0)//å·®å€¼ä¸ä¸ºé›¶ï¼Œè¯´æ˜äººæ•°ä¸ºå¶æ•°çš„å°ç»„çš„äººæ•°å› å¼åˆ†è§£åä¼šæœ‰å¥‡æ•°
-        //å¶æ•°å°ç»„äººæ•°å¤§äºå¥‡æ•°å°ç»„äººæ•°ï¼Œé™„åŠ èµ›äººæ•°=å·®å€¼*å¶æ•°å°ç»„æ•°*2+(å·®å€¼-1)*å¥‡æ•°å°ç»„æ•°*2,è‹¥å°äºç­‰äºåˆ™=å·®å€¼*å¶æ•°å°ç»„æ•°*2+(å·®å€¼+1)*å¥‡æ•°å°ç»„æ•°*2
+        int gap=evenGroupNum-pow(2,i-1);//Ëã³öÈËÊıÎªÅ¼ÊıµÄĞ¡×éµÄÈËÊı¾àÀë±ÈÆäĞ¡µ«ÓÖ×î½Ó½üµÄ2µÄn´ÎÃİµÄ²îÖµ
+        if(gap!=0)//²îÖµ²»ÎªÁã£¬ËµÃ÷ÈËÊıÎªÅ¼ÊıµÄĞ¡×éµÄÈËÊıÒòÊ½·Ö½âºó»áÓĞÆæÊı
+        //Å¼ÊıĞ¡×éÈËÊı´óÓÚÆæÊıĞ¡×éÈËÊı£¬¸½¼ÓÈüÈËÊı=²îÖµ*Å¼ÊıĞ¡×éÊı*2+(²îÖµ-1)*ÆæÊıĞ¡×éÊı*2,ÈôĞ¡ÓÚµÈÓÚÔò=²îÖµ*Å¼ÊıĞ¡×éÊı*2+(²îÖµ+1)*ÆæÊıĞ¡×éÊı*2
         roundOneNumber = (oddGroupNum < evenGroupNum) ? gap*2*evenGroup + (gap-1)*2*oddGroup : gap*2*evenGroup +(gap+1)*2*oddGroup;
-        /*å·®å€¼ä¸ºé›¶ï¼Œè¯´æ˜äººæ•°ä¸ºå¶æ•°çš„å°ç»„çš„äººæ•°æ˜¯2çš„næ¬¡æ–¹ï¼Œå¶æ•°å°ç»„äººæ•°å¤§äºå¥‡æ•°å°ç»„äººæ•°ï¼Œé™„åŠ èµ›äººæ•°=2*å¥‡æ•°å°ç»„äººæ•°*å¥‡æ•°å°ç»„äººæ•°ä¸
-          æ¯”å…¶å°ä½†åˆæœ€æ¥è¿‘çš„2çš„næ¬¡å¹‚çš„å·®å€¼ï¼Œå¦åˆ™ä¸ºå¥‡æ•°å°ç»„æ•°*2 */
+        /*²îÖµÎªÁã£¬ËµÃ÷ÈËÊıÎªÅ¼ÊıµÄĞ¡×éµÄÈËÊıÊÇ2µÄn´Î·½£¬Å¼ÊıĞ¡×éÈËÊı´óÓÚÆæÊıĞ¡×éÈËÊı£¬¸½¼ÓÈüÈËÊı=2*ÆæÊıĞ¡×éÈËÊı*ÆæÊıĞ¡×éÈËÊıÓë
+          ±ÈÆäĞ¡µ«ÓÖ×î½Ó½üµÄ2µÄn´ÎÃİµÄ²îÖµ£¬·ñÔòÎªÆæÊıĞ¡×éÊı*2 */
         else roundOneNumber = (oddGroupNum < evenGroupNum) ? 2*oddGroup*(oddGroupNum-pow(2,i-2)):oddGroup*2;
-        byeRoundNumber = number - roundOneNumber;                         // è®¡ç®—æ— éœ€å‚ä¸æ¯”èµ›çš„äººæ•°ï¼Œå³è½®ç©ºäººæ•°
-        byeRoundArray = Select(tempNameArray, byeRoundNumber);            // åœ¨æ‰€æœ‰çš„äººå‘˜ä¸­éšæœºé€‰å‡º byeRoundNumber ä¸ªäººä½œä¸ºè½®ç©ºäººå‘˜ï¼Œç”Ÿæˆä¸€ä¸ªåä¸º byeRoundArray çš„äºŒç»´å‘é‡
-        roundOneArray = deleteSameElements(tempNameArray, byeRoundArray); // åœ¨æ‰€æœ‰çš„äººå‘˜ä¸­å»æ‰è½®ç©ºäººå‘˜ï¼Œç”Ÿæˆä¸€ä¸ªåä¸º roundOneArray çš„äºŒç»´å‘é‡
-        groupArray = roundOneArray;                                       // å°† roundOneArray å¤åˆ¶åˆ° groupArrayï¼Œè¿™æ ·å¯ä»¥é¿å… roundOneArray è¢«ä¿®æ”¹æ—¶å½±å“åˆ° groupArray
-        /*å°†æ¯ä¸ªè½®ç©ºå°ç»„ä¸­çš„äººå‘˜æ’å…¥åˆ°ç¬¬ä¸€è½®å°ç»„ä¸­ï¼Œç”Ÿæˆä¸€ä¸ªæ–°çš„åä¸º groupArray çš„äºŒç»´å‘é‡ï¼Œ
-        å…¶ä¸­æ¯ä¸ªä¸€ç»´å‘é‡è¡¨ç¤ºä¸€ä¸ªæ¯”èµ›å°ç»„ï¼ŒåŒ…å«éœ€è¦å‚ä¸æ¯”èµ›çš„äººå‘˜å’Œè½®ç©ºçš„äººå‘˜ã€‚*/
+        byeRoundNumber = number - roundOneNumber;                         // ¼ÆËãÎŞĞè²ÎÓë±ÈÈüµÄÈËÊı£¬¼´ÂÖ¿ÕÈËÊı
+        byeRoundArray = Select(tempNameArray, byeRoundNumber);            // ÔÚËùÓĞµÄÈËÔ±ÖĞËæ»úÑ¡³ö byeRoundNumber ¸öÈË×÷ÎªÂÖ¿ÕÈËÔ±£¬Éú³ÉÒ»¸öÃûÎª byeRoundArray µÄ¶şÎ¬ÏòÁ¿
+        roundOneArray = deleteSameElements(tempNameArray, byeRoundArray); // ÔÚËùÓĞµÄÈËÔ±ÖĞÈ¥µôÂÖ¿ÕÈËÔ±£¬Éú³ÉÒ»¸öÃûÎª roundOneArray µÄ¶şÎ¬ÏòÁ¿
+        groupArray = roundOneArray;                                       // ½« roundOneArray ¸´ÖÆµ½ groupArray£¬ÕâÑù¿ÉÒÔ±ÜÃâ roundOneArray ±»ĞŞ¸ÄÊ±Ó°Ïìµ½ groupArray
+        /*½«Ã¿¸öÂÖ¿ÕĞ¡×éÖĞµÄÈËÔ±²åÈëµ½µÚÒ»ÂÖĞ¡×éÖĞ£¬Éú³ÉÒ»¸öĞÂµÄÃûÎª groupArray µÄ¶şÎ¬ÏòÁ¿£¬
+        ÆäÖĞÃ¿¸öÒ»Î¬ÏòÁ¿±íÊ¾Ò»¸ö±ÈÈüĞ¡×é£¬°üº¬ĞèÒª²ÎÓë±ÈÈüµÄÈËÔ±ºÍÂÖ¿ÕµÄÈËÔ±¡£*/
         for (int i = 0; i < groupArray.size() && i < byeRoundArray.size(); i++)
             groupArray[i].insert(groupArray[i].end(), byeRoundArray[i].begin(), byeRoundArray[i].end());
-        printList(out_file, "\nç¬¬ä¸€è½®è½®ç©ºåå•å¦‚ä¸‹ï¼š", byeRoundArray); // æ‰“å°ç¬¬ä¸€è½®è½®ç©ºåå•
-        printList(out_file, "\nç¬¬ä¸€è½®å¯¹é˜µåå•å¦‚ä¸‹ï¼š", roundOneArray); // æ‰“å°ç¬¬ä¸€è½®å¯¹é˜µåå•
-        printList(out_file, "\næ€»åˆ†ç»„ç»“æœå¦‚ä¸‹ï¼š", groupArray);        // æ‰“å°æ€»åˆ†ç»„ç»“æœ
+        printList(out_file, "\nµÚÒ»ÂÖÂÖ¿ÕÃûµ¥ÈçÏÂ£º", byeRoundArray); // ´òÓ¡µÚÒ»ÂÖÂÖ¿ÕÃûµ¥
+        printList(out_file, "\nµÚÒ»ÂÖ¶ÔÕóÃûµ¥ÈçÏÂ£º", roundOneArray); // ´òÓ¡µÚÒ»ÂÖ¶ÔÕóÃûµ¥
+        printList(out_file, "\n×Ü·Ö×é½á¹ûÈçÏÂ£º", groupArray);        // ´òÓ¡×Ü·Ö×é½á¹û
     }
     out_file.close();
 }
+
+// ¶¨ÒåÃûÎª printList µÄº¯Êı£¬·µ»ØÖµÎª¿Õ£¬ÓÃÓÚ´òÓ¡Ãûµ¥²¢Êä³öµ½ÎÄ¼ş¡£
 void Draw::printList(ofstream &out_file, string note, vector<vector<int>> &Array)
 {
-    vector<vector<string>> List;           // å®šä¹‰ä¸€ä¸ªäºŒç»´å­—ç¬¦ä¸²å‘é‡ List
-    for (int i = 0; i < Array.size(); i++) // éå†æ•´æ•°å‘é‡ Array çš„å…ƒç´ 
+    vector<vector<string>> List;           // ¶¨ÒåÒ»¸ö¶şÎ¬×Ö·û´®ÏòÁ¿ List
+    for (int i = 0; i < Array.size(); i++) // ±éÀúÕûÊıÏòÁ¿ Array µÄÔªËØ
     {
-        vector<string> row;                       // å®šä¹‰ä¸€ä¸ªå­—ç¬¦ä¸²å‘é‡ row
-        for (int j = 0; j < Array[i].size(); j++) // éå†æ•´æ•°å‘é‡ Array[i] çš„å…ƒç´ 
+        vector<string> row;                       // ¶¨ÒåÒ»¸ö×Ö·û´®ÏòÁ¿ row
+        for (int j = 0; j < Array[i].size(); j++) // ±éÀúÕûÊıÏòÁ¿ Array[i] µÄÔªËØ
         {
-            row.push_back(name[Array[i][j]]); // å‘ row å‘é‡æœ«å°¾æ·»åŠ  name[Array[i][j]]
+            row.push_back(name[Array[i][j]]); // Ïò row ÏòÁ¿Ä©Î²Ìí¼Ó name[Array[i][j]]
         }
-        List.push_back(row); // å°† row å‘é‡æ·»åŠ åˆ° List å‘é‡æœ«å°¾
+        List.push_back(row); // ½« row ÏòÁ¿Ìí¼Óµ½ List ÏòÁ¿Ä©Î²
     }
-    for (int i = 0; i <= 90; i++) // è¾“å‡º 90 ä¸ªä¸‹åˆ’çº¿
+    for (int i = 0; i <= 90; i++) // Êä³ö 90 ¸öÏÂ»®Ïß
         cout << "_";
-    cout << note << endl;     // è¾“å‡º note å¹¶æ¢è¡Œ
-    out_file << note << endl; // å‘è¾“å‡ºæ–‡ä»¶ä¸­å†™å…¥ note å¹¶æ¢è¡Œ
-    int i = 0;                // åˆå§‹åŒ– i ä¸º 0
-    for (auto vec : List)     // éå†äºŒç»´å­—ç¬¦ä¸²å‘é‡ List çš„æ¯ä¸€ä¸ªå‘é‡
+    cout << note << endl;     // Êä³ö note ²¢»»ĞĞ
+    out_file << note << endl; // ÏòÊä³öÎÄ¼şÖĞĞ´Èë note ²¢»»ĞĞ
+    int i = 0;                // ³õÊ¼»¯ i Îª 0
+    for (auto vec : List)     // ±éÀú¶şÎ¬×Ö·û´®ÏòÁ¿ List µÄÃ¿Ò»¸öÏòÁ¿
     {
-        cout << "ç¬¬ " << i + 1 << " ç»„"                  // è¾“å‡ºç»„å·
-             << "(" << countNonEmpty(List[i]) << ")"     // è¾“å‡ºå½“å‰ç»„çš„éç©ºå…ƒç´ æ•°é‡
-             << ":";                                     // è¾“å‡ºå†’å·
-        out_file << "ç¬¬ " << i + 1 << " ç»„"              // å‘è¾“å‡ºæ–‡ä»¶ä¸­å†™å…¥ç»„å·
-                 << "(" << countNonEmpty(List[i]) << ")" // å‘è¾“å‡ºæ–‡ä»¶ä¸­å†™å…¥å½“å‰ç»„çš„éç©ºå…ƒç´ æ•°é‡
-                 << ":";                                 // å‘è¾“å‡ºæ–‡ä»¶ä¸­å†™å…¥å†’å·
-        for (auto str : vec)                             // éå†å½“å‰å‘é‡ä¸­çš„æ¯ä¸€ä¸ªå­—ç¬¦ä¸²
+        cout << "µÚ " << i + 1 << " ×é"                  // Êä³ö×éºÅ
+             << "(" << countNonEmpty(List[i]) << ")"     // Êä³öµ±Ç°×éµÄ·Ç¿ÕÔªËØÊıÁ¿
+             << ":";                                     // Êä³öÃ°ºÅ
+        out_file << "µÚ " << i + 1 << " ×é"              // ÏòÊä³öÎÄ¼şÖĞĞ´Èë×éºÅ
+                 << "(" << countNonEmpty(List[i]) << ")" // ÏòÊä³öÎÄ¼şÖĞĞ´Èëµ±Ç°×éµÄ·Ç¿ÕÔªËØÊıÁ¿
+                 << ":";                                 // ÏòÊä³öÎÄ¼şÖĞĞ´ÈëÃ°ºÅ
+        for (auto str : vec)                             // ±éÀúµ±Ç°ÏòÁ¿ÖĞµÄÃ¿Ò»¸ö×Ö·û´®
         {
-            out_file << str << " "; // å‘è¾“å‡ºæ–‡ä»¶ä¸­å†™å…¥å½“å‰å­—ç¬¦ä¸²
-            cout << str << " ";     // è¾“å‡ºå½“å‰å­—ç¬¦ä¸²å¹¶åœ¨æœ«å°¾æ·»åŠ ä¸€ä¸ªç©ºæ ¼
+            out_file << str << " "; // ÏòÊä³öÎÄ¼şÖĞĞ´Èëµ±Ç°×Ö·û´®
+            cout << str << " ";     // Êä³öµ±Ç°×Ö·û´®²¢ÔÚÄ©Î²Ìí¼ÓÒ»¸ö¿Õ¸ñ
         }
-        out_file << endl; // å‘è¾“å‡ºæ–‡ä»¶ä¸­æ¢è¡Œ
-        cout << endl;     // è¾“å‡ºä¸€ä¸ªç©ºè¡Œ
-        i++;              // i è‡ªå¢ 1
+        out_file << endl; // ÏòÊä³öÎÄ¼şÖĞ»»ĞĞ
+        cout << endl;     // Êä³öÒ»¸ö¿ÕĞĞ
+        i++;              // i ×ÔÔö 1
     }
-    i = 0;                   // å°† i é‡ç½®ä¸º 0
-    if (Array == groupArray) // å¦‚æœåˆ†ç»„ç»“æœä¸ç¬¬ä¸€è½®ååˆ†ç»„ç»“æœç›¸åŒï¼Œå³æ‰€æœ‰é€‰æ‰‹éƒ½å‚ä¸äº†æ¯”èµ›ï¼Œä»¥æ–¹ä¾¿æ·±å¤§ç¾½åç­–åˆ’éƒ¨ç¼–æ’Excelå¯¹é˜µè¡¨çš„æ ¼å¼è¾“å‡ºæ€»åå•
+    i = 0;                   // ½« i ÖØÖÃÎª 0
+    if (Array == groupArray) // Èç¹û·Ö×é½á¹ûÓëµÚÒ»ÂÖºó·Ö×é½á¹ûÏàÍ¬£¬¼´ËùÓĞÑ¡ÊÖ¶¼²ÎÓëÁË±ÈÈü£¬ÒÔ·½±ãÉî´óÓğĞ­²ß»®²¿±àÅÅExcel¶ÔÕó±íµÄ¸ñÊ½Êä³ö×ÜÃûµ¥
     {
-        cin.get(); // å¸æ”¶å›è½¦
-        cout << "æŒ‰ä»»æ„é”®åˆ™ä»¥é€‚åˆç¼–æ’Excelå¯¹é˜µè¡¨çš„å½¢å¼è¾“å‡º" << endl;
+        cin.get(); // ÎüÊÕ»Ø³µ
+        cout << "°´ÈÎÒâ¼üÔòÒÔÊÊºÏ±àÅÅExcel¶ÔÕó±íµÄĞÎÊ½Êä³ö" << endl;
         cin.get();
-        for (auto vec : List) // éå†åˆ†ç»„ç»“æœ
+        for (auto vec : List) // ±éÀú·Ö×é½á¹û
         {
-            cout << "\nç¬¬ " << i + 1 << " ç»„"
-                 << "(" << countNonEmpty(List[i]) << ")\n"; // è¾“å‡ºåˆ†ç»„åºå·å’Œæ¯ç»„äººæ•°
+            cout << "\nµÚ " << i + 1 << " ×é"
+                 << "(" << countNonEmpty(List[i]) << ")\n"; // Êä³ö·Ö×éĞòºÅºÍÃ¿×éÈËÊı
 
-            out_file << "\nç¬¬ " << i + 1 << " ç»„"
+            out_file << "\nµÚ " << i + 1 << " ×é"
                      << "(" << countNonEmpty(List[i]) << ")\n";
 
-            for (auto str : vec) // éå†æ¯ç»„çš„é€‰æ‰‹å§“å
+            for (auto str : vec) // ±éÀúÃ¿×éµÄÑ¡ÊÖĞÕÃû
             {
                 out_file << str << endl
-                         << endl; // è¾“å‡ºæ¯ä¸ªé€‰æ‰‹å§“ååˆ°æ–‡ä»¶ä¸­
+                         << endl; // Êä³öÃ¿¸öÑ¡ÊÖĞÕÃûµ½ÎÄ¼şÖĞ
                 cout << str << endl
-                     << endl; // è¾“å‡ºæ¯ä¸ªé€‰æ‰‹å§“ååˆ°æ§åˆ¶å°ä¸­
+                     << endl; // Êä³öÃ¿¸öÑ¡ÊÖĞÕÃûµ½¿ØÖÆÌ¨ÖĞ
             }
             out_file << endl;
             cout << endl;
             i++;
         }
     }
-    cout << "ç”Ÿæˆäºï¼š" << getTime() << endl;
-    out_file << "ç”Ÿæˆäºï¼š" << getTime() << endl; // è¾“å‡ºç”Ÿæˆæ—¶é—´åˆ°æ–‡ä»¶å’Œæ§åˆ¶å°
+    cout << "Éú³ÉÓÚ£º" << getTime() << endl;
+    out_file << "Éú³ÉÓÚ£º" << getTime() << endl; // Êä³öÉú³ÉÊ±¼äµ½ÎÄ¼şºÍ¿ØÖÆÌ¨
 }
-void input(int option)
-{
-    if(option==1)
-    {
 
-    }
-}
 int main()
 {
-    Draw dr; // åˆ›å»º Draw ç±»å¯¹è±¡ drï¼Œç”¨äºæ‰§è¡ŒæŠ½ç­¾æ“ä½œã€‚
+    Draw dr; // ´´½¨ Draw Àà¶ÔÏó dr£¬ÓÃÓÚÖ´ĞĞ³éÇ©²Ù×÷¡£
     int gameOption = 0, eventOption = 1;
-    cout << "æœ¬ç¨‹åºè®¾è®¡æ—¶ä¸è€ƒè™‘ä»»ä½•é”™è¯¯è¾“å…¥çš„æƒ…å†µï¼Œå¦‚æœæœ‰é”™è¯¯è¾“å…¥è¯·å…³é—­å¹¶é‡æ–°è¿è¡Œ" << endl;
-    cout << "è¯·è¾“å…¥å¯¹åº”æ•°å­—é€‰æ‹©é¡¹ç›®: 1 å•é¡¹èµ›(æ·˜æ±°èµ›) 2 å•é¡¹èµ›(å¾ªç¯èµ›) 3 å›¢ä½“èµ›(æ·˜æ±°èµ›) 4 å›¢ä½“èµ›(å¾ªç¯èµ›) å…¶ä½™ä»»æ„é”® ç»“æŸ\n"; // è¾“å‡ºæŠ½ç­¾é¡¹ç›®é€‰é¡¹
-    cin >> gameOption;                                                                                                       // ç­‰å¾…ç”¨æˆ·è¾“å…¥é€‰é¡¹
-    if (gameOption == singleGame || gameOption == singleGameLoop)                                                            // å¦‚æœç”¨æˆ·é€‰æ‹©å•é¡¹èµ›æ·˜æ±°èµ›æˆ–å•é¡¹èµ›å¾ªç¯èµ›
+    cout << "±¾³ÌĞòÉè¼ÆÊ±²»¿¼ÂÇÈÎºÎ´íÎóÊäÈëµÄÇé¿ö£¬Èç¹ûÓĞ´íÎóÊäÈëÇë¹Ø±Õ²¢ÖØĞÂÔËĞĞ" << endl;
+    cout << "ÇëÊäÈë¶ÔÓ¦Êı×ÖÑ¡ÔñÏîÄ¿: 1 µ¥ÏîÈü(ÌÔÌ­Èü) 2 µ¥ÏîÈü(Ñ­»·Èü) 3 ÍÅÌåÈü(ÌÔÌ­Èü) 4 ÍÅÌåÈü(Ñ­»·Èü) ÆäÓàÈÎÒâ¼ü ½áÊø\n"; // Êä³ö³éÇ©ÏîÄ¿Ñ¡Ïî
+    cin >> gameOption;                                                                                                       // µÈ´ıÓÃ»§ÊäÈëÑ¡Ïî
+    if (gameOption == singleGame || gameOption == singleGameLoop)                                                            // Èç¹ûÓÃ»§Ñ¡Ôñµ¥ÏîÈüÌÔÌ­Èü»òµ¥ÏîÈüÑ­»·Èü
     {
-        cout << "è¯·è¾“å…¥å¯¹åº”æ•°å­—é€‰æ‹©é¡¹ç›®: 1 å•æ‰“ 2åŒæ‰“ å…¶ä½™ä»»æ„é”® ç»“æŸ\n";
+        cout << "ÇëÊäÈë¶ÔÓ¦Êı×ÖÑ¡ÔñÏîÄ¿: 1 µ¥´ò 2Ë«´ò ÆäÓàÈÎÒâ¼ü ½áÊø\n";
         cin >> eventOption;
         if (eventOption == 1)
-            cout << "è¯·è¾“å…¥å•æ‰“äººæ•°(åœ¨è®¾ç«‹ç§å­æ—¶ä¸ºéç§å­æ•°)ï¼š"; // æç¤ºç”¨æˆ·è¾“å…¥æ¯”èµ›äººæ•°æˆ–éç§å­é€‰æ‰‹äººæ•°
+            cout << "ÇëÊäÈëµ¥´òÈËÊı(ÔÚÉèÁ¢ÖÖ×ÓÊ±Îª·ÇÖÖ×ÓÊı)£º"; // ÌáÊ¾ÓÃ»§ÊäÈë±ÈÈüÈËÊı»ò·ÇÖÖ×ÓÑ¡ÊÖÈËÊı
         else if (eventOption == 2)
-            cout << "è¯·è¾“å…¥åŒæ‰“ç»„åˆæ•°(åœ¨è®¾ç«‹ç§å­æ—¶ä¸ºéç§å­æ•°)ï¼š";
+            cout << "ÇëÊäÈëË«´ò×éºÏÊı(ÔÚÉèÁ¢ÖÖ×ÓÊ±Îª·ÇÖÖ×ÓÊı)£º";
         else
             return 0;
     }
-    else if (gameOption == teamGameLoop || gameOption == teamGame) // å¦‚æœç”¨æˆ·é€‰æ‹©å›¢ä½“èµ›æ·˜æ±°èµ›æˆ–å›¢ä½“èµ›å¾ªç¯èµ›
-        cout << "è¯·è¾“å…¥é˜Ÿä¼æ•°(åœ¨è®¾ç«‹ç§å­æ—¶ä¸ºéç§å­æ•°)ï¼š";          // è¦æ±‚ç”¨æˆ·è¾“å…¥é˜Ÿä¼æ•°
+    else if (gameOption == teamGameLoop || gameOption == teamGame) // Èç¹ûÓÃ»§Ñ¡ÔñÍÅÌåÈüÌÔÌ­Èü»òÍÅÌåÈüÑ­»·Èü
+        cout << "ÇëÊäÈë¶ÓÎéÊı(ÔÚÉèÁ¢ÖÖ×ÓÊ±Îª·ÇÖÖ×ÓÊı)£º";          // ÒªÇóÓÃ»§ÊäÈë¶ÓÎéÊı
     else
         return 0;
-    cin >> dr.number;                              // è¯»å…¥æ¯”èµ›äººæ•°æˆ–éç§å­é€‰æ‰‹äººæ•°
-    cin.get();                                     // å¸æ”¶å›è½¦
-    dr.name.resize(dr.number);                     // ä¸º dr.name å‘é‡åˆ†é…å†…å­˜
-    cout << "\nè¯·è¾“å…¥ç§å­æ•°ï¼ˆè‹¥ä¸è®¾ç«‹åˆ™è¾“å…¥0ï¼‰ï¼š"; // æç¤ºç”¨æˆ·è¾“å…¥ç§å­æ•°
-    cin >> dr.seededNumber;                        // è¯»å…¥ç§å­æ•°
-    cin.get();                                     // å¸æ”¶å›è½¦
-    dr.seededName.resize(dr.seededNumber);         // ä¸º dr.seededName å‘é‡åˆ†é…å†…å­˜
+    cin >> dr.number;                              // ¶ÁÈë±ÈÈüÈËÊı»ò·ÇÖÖ×ÓÑ¡ÊÖÈËÊı
+    cin.get();                                     // ÎüÊÕ»Ø³µ
+    dr.name.resize(dr.number);                     // Îª dr.name ÏòÁ¿·ÖÅäÄÚ´æ
+    cout << "\nÇëÊäÈëÖÖ×ÓÊı£¨Èô²»ÉèÁ¢ÔòÊäÈë0£©£º"; // ÌáÊ¾ÓÃ»§ÊäÈëÖÖ×ÓÊı
+    cin >> dr.seededNumber;                        // ¶ÁÈëÖÖ×ÓÊı
+    cin.get();                                     // ÎüÊÕ»Ø³µ
+    dr.seededName.resize(dr.seededNumber);         // Îª dr.seededName ÏòÁ¿·ÖÅäÄÚ´æ
     if (eventOption != 2)
     {
-        cout << "è¯· æŒ‰åˆ— è¾“å…¥åå•ï¼š" << endl; // æç¤ºç”¨æˆ·è¾“å…¥æ¯ä¸ªäººçš„åå­—
-        for (int i = 0; i < dr.number; i++)   // ä¾æ¬¡è¯»å…¥æ¯ä¸ªäººçš„åå­—
+        cout << "Çë °´ÁĞ ÊäÈëÃûµ¥£º" << endl; // ÌáÊ¾ÓÃ»§ÊäÈëÃ¿¸öÈËµÄÃû×Ö
+        for (int i = 0; i < dr.number; i++)   // ÒÀ´Î¶ÁÈëÃ¿¸öÈËµÄÃû×Ö
             getline(cin, dr.name[i]);
-        if (dr.seededNumber != 0) // å¦‚æœæœ‰ç§å­é€‰æ‰‹
+        if (dr.seededNumber != 0) // Èç¹ûÓĞÖÖ×ÓÑ¡ÊÖ
         {
-            cout << "è¯· æŒ‰åˆ— è¾“å…¥ç§å­åå•ï¼š" << endl; // æç¤ºç”¨æˆ·è¾“å…¥æ¯ä¸ªç§å­é€‰æ‰‹çš„åå­—
-            for (int i = 0; i < dr.seededNumber; i++) // ä¾æ¬¡è¯»å…¥æ¯ä¸ªç§å­é€‰æ‰‹çš„åå­—
+            cout << "Çë °´ÁĞ ÊäÈëÖÖ×ÓÃûµ¥£º" << endl; // ÌáÊ¾ÓÃ»§ÊäÈëÃ¿¸öÖÖ×ÓÑ¡ÊÖµÄÃû×Ö
+            for (int i = 0; i < dr.seededNumber; i++) // ÒÀ´Î¶ÁÈëÃ¿¸öÖÖ×ÓÑ¡ÊÖµÄÃû×Ö
                 getline(cin, dr.seededName[i]);
         }
     }
@@ -358,32 +367,32 @@ int main()
     {
         vector<string> temp;
         temp.resize(dr.number);
-        cout << "è¯· æŒ‰åˆ— è¾“å…¥åŒæ‰“ç¬¬ä¸€åˆ—é€‰æ‰‹åå•ï¼š" << endl; // æç¤ºç”¨æˆ·è¾“å…¥æ¯ä¸ªäººçš„åå­—
-        for (int i = 0; i < dr.number; i++)                 // ä¾æ¬¡è¯»å…¥æ¯ä¸ªäººçš„åå­—
+        cout << "Çë °´ÁĞ ÊäÈëË«´òµÚÒ»ÁĞÑ¡ÊÖÃûµ¥£º" << endl; // ÌáÊ¾ÓÃ»§ÊäÈëÃ¿¸öÈËµÄÃû×Ö
+        for (int i = 0; i < dr.number; i++)                 // ÒÀ´Î¶ÁÈëÃ¿¸öÈËµÄÃû×Ö
             getline(cin, dr.name[i]);
-        cout << "è¯· æŒ‰åˆ— è¾“å…¥åŒæ‰“ç¬¬ä¸€åˆ—é€‰æ‰‹çš„é˜Ÿå‹åå•ï¼š" << endl; // æç¤ºç”¨æˆ·è¾“å…¥æ¯ä¸ªäººçš„åå­—
-        for (int i = 0; i < dr.number; i++)                       // ä¾æ¬¡è¯»å…¥æ¯ä¸ªäººçš„åå­—
+        cout << "Çë °´ÁĞ ÊäÈëË«´òµÚÒ»ÁĞÑ¡ÊÖµÄ¶ÓÓÑÃûµ¥£º" << endl; // ÌáÊ¾ÓÃ»§ÊäÈëÃ¿¸öÈËµÄÃû×Ö
+        for (int i = 0; i < dr.number; i++)                       // ÒÀ´Î¶ÁÈëÃ¿¸öÈËµÄÃû×Ö
         {
             getline(cin, temp[i]);
             dr.name[i] = "[" + dr.name[i] + " " + temp[i] + "]";
         }
-        if (dr.seededNumber != 0) // å¦‚æœæœ‰ç§å­é€‰æ‰‹
+        if (dr.seededNumber != 0) // Èç¹ûÓĞÖÖ×ÓÑ¡ÊÖ
         {
             temp.clear();
             temp.resize(dr.seededNumber);
-            cout << "è¯· æŒ‰åˆ— è¾“å…¥åŒæ‰“ç§å­ç¬¬ä¸€åˆ—é€‰æ‰‹åå•ï¼š" << endl; // æç¤ºç”¨æˆ·è¾“å…¥æ¯ä¸ªç§å­é€‰æ‰‹çš„åå­—
-            for (int i = 0; i < dr.seededNumber; i++) // ä¾æ¬¡è¯»å…¥æ¯ä¸ªç§å­é€‰æ‰‹çš„åå­—
+            cout << "Çë °´ÁĞ ÊäÈëË«´òÖÖ×ÓµÚÒ»ÁĞÑ¡ÊÖÃûµ¥£º" << endl; // ÌáÊ¾ÓÃ»§ÊäÈëÃ¿¸öÖÖ×ÓÑ¡ÊÖµÄÃû×Ö
+            for (int i = 0; i < dr.seededNumber; i++) // ÒÀ´Î¶ÁÈëÃ¿¸öÖÖ×ÓÑ¡ÊÖµÄÃû×Ö
                 getline(cin, temp[i]);
-            cout << "è¯· æŒ‰åˆ— è¾“å…¥åŒæ‰“ç§å­ç¬¬ä¸€åˆ—é€‰æ‰‹çš„é˜Ÿå‹åå•ï¼š" << endl; // æç¤ºç”¨æˆ·è¾“å…¥æ¯ä¸ªç§å­é€‰æ‰‹çš„åå­—
-            for (int i = 0; i < dr.seededNumber; i++) // ä¾æ¬¡è¯»å…¥æ¯ä¸ªç§å­é€‰æ‰‹çš„åå­—
+            cout << "Çë °´ÁĞ ÊäÈëË«´òÖÖ×ÓµÚÒ»ÁĞÑ¡ÊÖµÄ¶ÓÓÑÃûµ¥£º" << endl; // ÌáÊ¾ÓÃ»§ÊäÈëÃ¿¸öÖÖ×ÓÑ¡ÊÖµÄÃû×Ö
+            for (int i = 0; i < dr.seededNumber; i++) // ÒÀ´Î¶ÁÈëÃ¿¸öÖÖ×ÓÑ¡ÊÖµÄÃû×Ö
             {    
                 getline(cin, dr.seededName[i]);
                 dr.seededName[i]="[" + dr.seededName[i] + " " + temp[i] + "]";
             }
         }
     }
-    cout << "è¯·è¾“å…¥å°ç»„çš„ä¸ªæ•°ï¼š";
-    cin >> dr.groupNumber;     // è¦æ±‚ç”¨æˆ·è¾“å…¥å°ç»„çš„ä¸ªæ•°ï¼Œå¹¶å°†å…¶å­˜å‚¨åˆ° dr.groupNumber å˜é‡ä¸­
-    dr.generation(gameOption); // è°ƒç”¨ dr.generation(option) å‡½æ•°ï¼Œç”Ÿæˆæ¯”èµ›åå•ï¼Œè¿›è¡ŒæŠ½ç­¾æ“ä½œ
-    system("pause");           // æœ€åè°ƒç”¨ system("pause") å‡½æ•°ï¼Œä½¿ç¨‹åºæš‚åœè¿è¡Œï¼Œç›´åˆ°ç”¨æˆ·æŒ‰ä¸‹ä»»æ„é”®ç»§ç»­æ‰§è¡Œ
+    cout << "ÇëÊäÈëĞ¡×éµÄ¸öÊı£º";
+    cin >> dr.groupNumber;     // ÒªÇóÓÃ»§ÊäÈëĞ¡×éµÄ¸öÊı£¬²¢½«Æä´æ´¢µ½ dr.groupNumber ±äÁ¿ÖĞ
+    dr.generation(gameOption); // µ÷ÓÃ dr.generation(option) º¯Êı£¬Éú³É±ÈÈüÃûµ¥£¬½øĞĞ³éÇ©²Ù×÷
+    system("pause");           // ×îºóµ÷ÓÃ system("pause") º¯Êı£¬Ê¹³ÌĞòÔİÍ£ÔËĞĞ£¬Ö±µ½ÓÃ»§°´ÏÂÈÎÒâ¼ü¼ÌĞøÖ´ĞĞ
 }
