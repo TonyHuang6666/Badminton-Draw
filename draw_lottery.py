@@ -194,9 +194,16 @@ class Draw:
                 self._distribute_seeded(self.seededArray, tempNameArray)
                 tempNameArray.sort(key=len)
 
-            # 6) 循环赛直接打印总分组
+            # 6) 循环赛：同时填充数组，便于GUI直接读取（不再只打印）
             if option in (singleGameLoop, teamGameLoop):
-                self._print_list(out_f, "\n总分组结果如下：", tempNameArray)
+                # 将索引行保存为最终分组；为保持兼容，roundOne/bye 也填同样数据
+                self.groupArray = [list(row) for row in tempNameArray]
+                self.roundOneArray = [list(row) for row in tempNameArray]
+                self.byeRoundArray = [list(row) for row in tempNameArray]
+                # 统计：循环赛没有首轮，设为0；轮空人数设为总人数，便于显示
+                self.roundOneNumber = 0
+                self.byeRoundNumber = self.number
+                self._print_list(out_f, "\n总分组结果如下：", self.groupArray)
                 return
 
             # 7) 淘汰赛：计算奇偶组的数量与“某个奇数组/偶数组的人数”
